@@ -2,8 +2,8 @@
 <h4>Numero de deportes {{deportes.length}}</h4>
 <h3 style="color: coral">EL segundo deporte es {{deportes[1]}}</h3>
 
-<div *ngIf="deportes.length<7; else deportMayor7">
-  <p>Hay menos de 7 deportes</p>
+<div *ngIf="deportes.length<7;then deporteMenor7; else deportMayor7">
+  
 </div>
 
 <!-- un bucle se realizar sobre la eqtiqueta html que deseamos repetir nveces 
@@ -16,4 +16,8 @@ bucle each
 </ul>
 <ng-template #deportMayor7>
     <h3 style="color: firebrick;">Tenemos mas de 7 deportes</h3>
+</ng-template>
+
+<ng-template #deporteMenor7>
+    <h3 style="color: cadetblue;">Hay menos de 7 deportes</h3>
 </ng-template>

@@ -1,0 +1,33 @@
+<h1>Numeros Aleatorios</h1>
+
+<button (click)="generarNumero()">Agregar num</button>
+<h3>Directiva ngstyle inline</h3>
+<ul>
+  <li
+    *ngFor="let numero of numeroAleatoirio"
+    [style.color]="numero % 2 == 0 ? 'green' : 'orange'"
+  >
+    Numero : {{ numero }}
+  </li>
+</ul>
+<h3>Directiva ngstyle externa</h3>
+<ul>
+  <li
+    *ngFor="let numero of numeroAleatoirio"
+    [class.par]="numero % 2 == 0"
+    [class.impar]="numero % 2 != 0"
+  >
+    Numero : {{ numero }}
+  </li>
+</ul>
+<h3>Directiva ngClass</h3>
+<ul>
+    <li
+      *ngFor="let numero of numeroAleatoirio"
+      [ngClass]="{
+        par2: numero %2 == 0,
+        impar2: numero %2 != 0
+      }">
+      Numero : {{ numero }}
+    </li>
+  </ul>

@@ -1,0 +1,13 @@
+<h1>Positvo negativo</h1>
+<button (click)="agregarNum()">Agregar Numero</button>
+<ul>
+  <li
+    *ngFor="let num of arrayNum"
+    [ngClass]="{
+      post: num > 0,
+      neg: num < 0
+    }"
+  >
+    {{ num }}
+  </li>
+</ul>

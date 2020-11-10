@@ -15,10 +15,6 @@ export class Deporte {
       'Tennis',
       'Ping Pong',
       'Pesca',
-      'Beisoball',
-      'Tennis',
-      'Ping Pong',
-      'Pesca',
     ];
   }
 }
