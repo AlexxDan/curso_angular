@@ -9,10 +9,10 @@ export class TablamultiplicarComponent implements OnInit {
   @ViewChild('numero') numero: ElementRef;
   public tabla: Array<number>;
   public num: number;
-  
+
   constructor() {
-    this.num=0;
-    this.tabla=[];
+    this.num = 0;
+    this.tabla = [];
   }
 
   ngOnInit(): void {}
@@ -22,7 +22,6 @@ export class TablamultiplicarComponent implements OnInit {
     let calculo = 0;
     for (let i = 0; i < 11; i++) {
       calculo = this.num * i;
-      console.log(calculo + '  ' + i);
       this.tabla.push(calculo);
     }
   }
