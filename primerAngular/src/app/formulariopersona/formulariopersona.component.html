@@ -1,0 +1,36 @@
+<h1>Formulario Binding Model</h1>
+<h3 style="color: blue">{{ mensaje }}</h3>
+<form #userForm="ngForm" (ngSubmit)="recibirDatos()">
+  <label for="nombre">Nombre</label>
+  <input
+    type="text"
+    name="nombre"
+    #nombre="ngModel"
+    [(ngModel)]="user.nombre"
+ required />
+  <label style="color: red;" *ngIf="!nombre.valid && nombre.touched">
+    EL nombre es obligatorio
+</label>
+  <br />
+  <label for="apellidos">Apellidos</label>
+  <input
+    type="text"
+    name="apellidos"
+    #apellidos="ngModel"
+    [(ngModel)]="user.apellidos"
+    pattern="[A-Z]{1}[a-z]{2}"
+  />
+  <label style="color: red;" *ngIf="!apellidos.valid && apellidos.touched">
+    Los apellidos es obligatorio
+</label>
+  <br />
+  <label for="edad">Edad</label>
+  <input type="text" name="edad" #edad="ngModel" [(ngModel)]="user.edad" />
+  <br />
+  <button [disabled]="!userForm.valid">Enviar Datos</button>
+</form>
+<hr />
+<ul>
+  <li>Nombre y Apellidos :{{ user.nombre }}, {{ user.apellidos }}</li>
+  <li>Edad :{{ user.edad }}</li>
+</ul>
