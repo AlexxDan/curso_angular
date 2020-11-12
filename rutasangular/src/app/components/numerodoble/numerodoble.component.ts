@@ -13,6 +13,11 @@ export class NumerodobleComponent implements OnInit {
 
   //debemos inyectar los dos objetosa para poder recuperar rutaas Activateroute y ROuter
   constructor(private _activeRouter: ActivatedRoute, private _router: Router) {}
+  
+  //creamos un metodo para la redireccion en este ejemplo , a nosostros mismos
+  redirect(num){
+    this._router.navigate( ["/numerodoble", num] );
+  }
 
   ngOnInit(): void {
     //Debemos suscribirnos al parametro para poder
