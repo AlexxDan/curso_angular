@@ -1,0 +1,7 @@
+<div>
+<h1 style="color: teal;">Padre contador</h1>
+<h3 style="color: slateblue;">{{mensaje}}</h3>
+<div *ngFor="let num of numeros, let i =index">
+    <app-hijocontador [inicio]="num" [idContador]="i+1" (recibirIdContador)="recibirIdContador($event)"></app-hijocontador>
+</div>
+</div>

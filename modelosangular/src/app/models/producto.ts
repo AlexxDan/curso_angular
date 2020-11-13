@@ -1,5 +1,5 @@
-export class Producto{
-    public nombre:string;
+export class Producto {
+  /* public nombre:string;
     public imagen:string;
     public precio:number;
 
@@ -8,5 +8,12 @@ export class Producto{
         this.nombre=nom;
         this.imagen=img;
         this.precio=precio;
-    }
+    }*/
+
+  //Asi se ahora tiempo en la auto asignacion y la declarion de variables
+  constructor(
+    public nombre: string,
+    public imagen: string,
+    public precio: number
+  ) {}
 }

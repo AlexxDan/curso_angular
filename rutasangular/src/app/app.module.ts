@@ -12,7 +12,6 @@ import { Error404Component } from './components/rutas/error404/error404.componen
 import { NumerodobleComponent } from './components/numerodoble/numerodoble.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
