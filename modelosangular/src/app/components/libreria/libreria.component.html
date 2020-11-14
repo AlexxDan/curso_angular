@@ -1,13 +1,15 @@
 <h1>Listado de comics</h1>
 <div>
-  <form >
-    <label>Nombre comic</label>
-    <input type="text" /><br />
-    <label>Imagen comic </label><input type="text" />
+  <form #comicForm="ngForm">
+    <label for="nombreComic">Nombre comic</label>
+    <input type="text" name="nombreComic" #nombreComic/><br />
+    <label for="imgComic">Imagen comic </label>
+    <input type="text" name="imgComic" #imgComic/>
     <br />
-    <label>Descripcion</label>
-    <input type="text" /><br />
-    <button>Registrar Comics</button>
+    <label for="descripComic">Descripcion</label>
+    <input type="text" name="descripComic" #descripComic/><br />
+    <button (click)="registrarComic()">Registrar Comics</button>
+    <button (click)="modificarComic()">Modifcar Comics</button>
   </form>
   <div *ngIf="favorito != null" style="background-color: bisque">
     <app-comic [comic]="favorito"></app-comic>
@@ -18,7 +20,7 @@
     <app-comic
       [comic]="comic"
       [indice]="i"
-      (comicFavoritoPadre)="comicFavoritoPadre($event)"
+      (comicFavorito)="comicFavoritoPadre($event)"
       (eliminarComic)="eliminarComic($event)"
     ></app-comic>
   </div>

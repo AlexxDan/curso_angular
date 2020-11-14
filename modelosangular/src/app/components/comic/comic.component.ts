@@ -10,19 +10,17 @@ export class ComicComponent implements OnInit {
   @Input() comic:Comic;
   @Input() indice:number;
   @Output() comicFavorito=new EventEmitter();
-  @Output() eliminarComic=new EventEmitter();
+  @Output() deltComic=new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
-  favorito(){
-    console.log("Hijo");
-    console.log(this.indice);
+  favorito( event ){
     this.comicFavorito.emit(this.indice);
   }
 
   deleteComic(){
-this.eliminarComic.emit(this.indice);
+  this.deltComic.emit(this.indice);
   }
 }
