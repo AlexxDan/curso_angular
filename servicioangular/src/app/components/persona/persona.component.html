@@ -1,0 +1,18 @@
+<h1>Servicio Http personas</h1>
+<table border="1">
+  <tr>
+    <th>Nombre</th>
+    <th>Emael</th>
+    <th>Edad</th>
+  </tr>
+  <tr *ngFor="let persona of personas">
+    <td>{{ persona.Nombre }}</td>
+    <td>{{ persona.Email }}</td>
+    <td>{{ persona.Edad }}</td>
+  </tr>
+</table>
+<div *ngFor="let persona of personas">
+  <h1>{{ persona.Nombre }}, {{ persona.Edad }}</h1>
+  <h3>{{ persona.Email }}</h3>
+  <label>ID {{ persona.IdPersona }}</label>
+</div>
