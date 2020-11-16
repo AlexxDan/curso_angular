@@ -5,16 +5,20 @@ import { AppComponent } from './app.component';
 import { PersonajeComponent } from './components/personaje/personaje.component';
 import { PersonaComponent } from './components/persona/persona.component';
 import { CocheComponent } from './components/coche/coche.component';
+import {FormsModule} from "@angular/forms";
+
+import { EmpleadosalarioComponent } from './components/empleadosalario/empleadosalario.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonajeComponent,
     PersonaComponent,
-    CocheComponent
+    CocheComponent,
+    EmpleadosalarioComponent
   ],
   imports: [
-    BrowserModule,HttpClientModule
+    BrowserModule,HttpClientModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

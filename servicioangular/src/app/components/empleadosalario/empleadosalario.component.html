@@ -1,0 +1,36 @@
+<h1>Buscador Api EMpleado salario</h1>
+<form #salarioForm="ngForm">
+  <label>Introduza salario </label>
+  <input type="number" class="form-control" #cajsalario name="cajsalario" />
+  <br />
+  <button (click)="buscarEmpleados()" class="btn btn-success">Buscar Salario</button>
+  <h1>Seleccionar oficio</h1>
+  <select #selectOficio name="selectOficio">
+    <option *ngFor="let ofic of oficios" value={{ofic}}>{{ofic}}</option>
+  </select>
+<button (click)="buscarEmpOficio()">Buscar por oficio</button>
+</form>
+<hr />
+
+<div *ngIf="empleados.length > 0">
+  <table class="table-bordered table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Apellidos</th>
+        <th>Salario</th>
+        <th>Oficio</th>
+        <th>Dept</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of empleados">
+        <td>{{ emp.idEmpleado }}</td>
+        <td>{{ emp.apellido }}</td>
+        <td>{{ emp.salario }}</td>
+        <td>{{ emp.oficio }}</td>
+        <td>{{ emp.departamento }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
