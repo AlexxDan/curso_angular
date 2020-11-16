@@ -4,6 +4,8 @@
   <input type="number" class="form-control" #cajsalario name="cajsalario" />
   <br />
   <button (click)="buscarEmpleados()" class="btn btn-success">Buscar Salario</button>
+  
+  <!--Select de oficio-->
   <h1>Seleccionar oficio</h1>
   <select #selectOficio name="selectOficio">
     <option *ngFor="let ofic of oficios" value={{ofic}}>{{ofic}}</option>

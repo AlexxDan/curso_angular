@@ -16,11 +16,13 @@ export class EmpleadoService {
     return this._httpCliente.get(this.url + request);
   }
 
+  //Filtrar por oficio
   filtrarOficio(oficio: string): Observable<any> {
     var request = 'api/Empleados/EmpleadosOficio/' + oficio;
     return this._httpCliente.get(this.url + request);
   }
 
+  //Buscar todos los oficios
   getOficio(): Observable<any> {
     var request = '/api/Empleados/oficios';
     return this._httpCliente.get(this.url + request);
