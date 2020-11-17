@@ -10,7 +10,8 @@ import { routing,appRoutingProviders} from "./app.routing"
 
 import { EmpleadosalarioComponent } from './components/empleadosalario/empleadosalario.component';
 import { TablaempeladosComponent } from './components/tablaempelados/tablaempelados.component';
-import { DetallempleadosComponent } from './components/detallempleados/detallempleados.component'
+import { DetallempleadosComponent } from './components/detallempleados/detallempleados.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { DetallempleadosComponent } from './components/detallempleados/detallemp
     CocheComponent,
     EmpleadosalarioComponent,
     TablaempeladosComponent,
-    DetallempleadosComponent
+    DetallempleadosComponent,
   ],
   imports: [
     BrowserModule,HttpClientModule,FormsModule,routing

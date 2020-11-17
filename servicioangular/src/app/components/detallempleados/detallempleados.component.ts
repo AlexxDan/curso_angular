@@ -17,21 +17,20 @@ export class DetallempleadosComponent implements OnInit {
     private _activateRoute: ActivatedRoute,
     private _service: EmpleadoRoutingService
   ) {}
-  //empno
   ngOnInit(): void {
     this._activateRoute.params.subscribe((params: Params) => {
-      
       this.buscarEmpleado(params.empno);
-    })
-   
+    });
   }
 
   buscarEmpleado(empno) {
- this._service.buscarEmpleado(empno).subscribe(response=>{
-   this.emp=response;
- }, error=>{
-   console.log("Error al buscar empleado con id "+empno);
-   
- })
+    this._service.buscarEmpleado(empno).subscribe(
+      (response) => {
+        this.emp = response;
+      },
+      (error) => {
+        console.log('Error al buscar empleado con id ' + empno);
+      }
+    );
   }
 }
