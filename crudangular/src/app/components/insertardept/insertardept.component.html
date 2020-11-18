@@ -1,0 +1,12 @@
+<div>
+    <h1>Insertar nuevo departamento</h1>
+    <form #insert="ngForm">
+        <label>Número</label>
+        <input type="number" class="form-control" #cajNum name="cajNum"/><br/>
+        <label>Nombre</label>
+        <input type="text" class="form-control" #cajNombre name="cajNombre"/><br/>
+        <label>Localidad</label>
+        <input type="text" class="form-control" #cajLoc name="cajLoc"/><br/>
+        <button (click)="insertarDepartamento()">Insertar departamento</button>
+    </form>
+</div>

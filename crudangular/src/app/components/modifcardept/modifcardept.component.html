@@ -1,0 +1,33 @@
+<div>
+  <h1>Modificar departamento</h1>
+  <div *ngIf="departamento != null">
+    <form #modifc="ngForm">
+      <label>Número</label>
+      <input
+        type="number"
+        class="form-control"
+        #cajNum
+        name="cajNum"
+        readonly
+        value="{{ departamento.numero }}"
+      /><br />
+      <label>Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        #cajNombre
+        name="cajNombre"
+        value="{{ departamento.nombre }}"
+      /><br />
+      <label>Localidad</label>
+      <input
+        type="text"
+        class="form-control"
+        #cajLoc
+        name="cajLoc"
+        value="{{ departamento.localidad }}"
+      /><br />
+      <button (click)="updateDept()">Insertar departamento</button>
+    </form>
+  </div>
+</div>
