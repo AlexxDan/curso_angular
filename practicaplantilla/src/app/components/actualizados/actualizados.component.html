@@ -1,0 +1,23 @@
+<button class="btn btn-success" (click)="gotoHome()">Ir al home</button>
+  <h1>Lista de empleados modificados</h1>
+<div *ngIf="plantillaFuncion.length > 0">
+  
+  <table class="table table-info">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Apellido</th>
+        <th>Salario</th>
+        <th>Funcion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let plant of plantillaFuncion">
+        <td>{{ plant.idEmpleado }}</td>
+        <td>{{ plant.apellido }}</td>
+        <td>{{ plant.funcion }}</td>
+        <td>{{ plant.salario }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

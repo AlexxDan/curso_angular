@@ -20,8 +20,7 @@ import { NumerodobleComponent } from './components/numerodoble/numerodoble.compo
     TvComponent,
     MenuComponent,
     Error404Component,
-    NumerodobleComponent
-  ],
+    NumerodobleComponent,  ],
   imports: [
     BrowserModule,FormsModule,routing
   ],

@@ -1,0 +1,8 @@
+<div *ngIf="plantilla != null">
+  <h1>Apellido: {{plantilla.apellido}}</h1>
+  <h4>ID Empleado: {{plantilla.idEmpleado}}</h4>
+  <label>Funcion:{{plantilla.funcion}}</label>
+  <h3>Turno: {{ plantilla.turno}}</h3>
+  <h4>Salario:{{ plantilla.salario }}</h4>
+  <button (click)="gotoHome()" class="btn btn-info">Regresar al home</button>
+</div>

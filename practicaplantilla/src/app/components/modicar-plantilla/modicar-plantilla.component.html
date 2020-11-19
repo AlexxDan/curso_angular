@@ -1,0 +1,15 @@
+<div *ngIf="funciones.length > 0">
+  <form #formFuncion="ngForm">
+      <label>Selecione una funcion</label>
+    <select #funcion name="funcion" class="form-control">
+      <option value="">-----</option>
+      <option *ngFor="let fun of funciones" value="{{fun}}">{{ fun }}</option>
+    </select>
+  <label>
+      Aumento de salario
+  </label>
+  <input type="number" #aumSalario name="aumSalario"/>
+  <br/>
+    <button (click)="actualizarSalario()">Actualizar a una funcion</button>
+  </form>
+</div>

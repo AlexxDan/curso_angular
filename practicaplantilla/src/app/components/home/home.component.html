@@ -1,0 +1,22 @@
+
+<div *ngIf="allplantillas.length>0">
+
+    <table class="table table-primary">
+        <thead>
+            <tr>
+                <th>idEmpleado</th>
+                <th>apellido</th>
+                <th>funcion</th>
+                <th>Detalles</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let plantilla of allplantillas">
+                <td>{{plantilla.idEmpleado}}</td>
+                <td>{{plantilla.apellido}}</td>
+                <td>{{plantilla.funcion}}</td>
+                <td><a [routerLink]="['/detalle/',plantilla.idEmpleado]" class="btn btn-warning" >Detalles</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
