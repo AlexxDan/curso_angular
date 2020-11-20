@@ -1,0 +1,17 @@
+<h1>
+    Personaje Nuevo
+</h1>
+<form #registerForm="ngForm">
+<label>ID es auto incremental</label><br/>
+<label>Nombre</label>
+<input type="text" class="form-control" #cajNombre name="cajNombre" />
+<br/>
+<label>Imagen</label>
+<input type="text" class="form-control" #cajimg name="cajimg" />
+<br/>
+<label>Serie</label>
+<select #selectSerie name="selectSerie">
+<option *ngFor="let serie of seriesSelect" value="{{serie.idSerie}}">{{serie.nombre}}</option>
+</select>
+<button (click)="registrarPersonaje()">Registrar Perosnaje</button>
+</form>

@@ -11,6 +11,7 @@ import { routing,appRoutingProviders} from "./app.routing"
 import { EmpleadosalarioComponent } from './components/empleadosalario/empleadosalario.component';
 import { TablaempeladosComponent } from './components/tablaempelados/tablaempelados.component';
 import { DetallempleadosComponent } from './components/detallempleados/detallempleados.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { DetallempleadosComponent } from './components/detallempleados/detallemp
     EmpleadosalarioComponent,
     TablaempeladosComponent,
     DetallempleadosComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,HttpClientModule,FormsModule,routing

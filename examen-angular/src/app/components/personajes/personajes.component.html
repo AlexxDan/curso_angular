@@ -1,0 +1,20 @@
+<h1>Personajes</h1>
+<a [routerLink]="['/']" class="btn btn-danger">Volver</a>
+<div *ngIf="personajes.length>0">
+<table class="table-dark table">
+<thead>
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Imagen</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let personaje of personajes">
+        <td>{{personaje.idPersonaje}}</td>
+        <td><img src="{{personaje.imagen}}" style="width: 150px; height: 150px;"/></td>
+        <td>{{personaje.idPersonaje}}</td>
+    </tr>
+</tbody>
+</table>
+</div>

@@ -1,0 +1,19 @@
+<h1>Home Series</h1>
+<div class="row" *ngIf="series.length>0">
+  <div class="col-sm-3" *ngFor="let serie of series">
+    <div class="card" style="width: 18rem" >
+      <img class="card-img-top" src="{{ serie.imagen }}" alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title">{{ serie.nombre }}</h5>
+        <p class="card-text">IDM {{ serie.puntuacion }}</p>
+      </div>
+      <div class="card-body">
+        <a
+          href="#"
+          class="btn btn-success"
+          [routerLink]="['/personaje/', serie.idSerie]"
+          >Personajes</a>
+      </div>
+    </div>
+  </div>
+</div>
